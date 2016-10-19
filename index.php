@@ -1,5 +1,6 @@
 <html>
 <head>
+    <link rel="shortcut icon" href="favicon.ico"/>
     <style>
         body {
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
