@@ -41,7 +41,7 @@
 <?php
 foreach (preg_grep('/^([^.])/', scandir(".")) as $f) {
     $ext = pathinfo($f, PATHINFO_EXTENSION);
-    if ($f != "." && $f != ".." && $ext != "php") {
+    if ($f != "." && $f != ".." && is_dir($f)) {
         echo "<p><a href='" . $f . "'>" . $f . "</a></p>";
     }
 }
