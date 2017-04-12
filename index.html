@@ -5,25 +5,25 @@
         body {
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
             padding: 50px;
-            background-color: black;
+            background-color: #FDF6E3;
             color: white;
             font-size: 16px;
         }
 
         a {
             text-decoration: none;
-            background: red;
+            background: #B58900;
             color: white;
             padding: 5px;
         }
 
         a:hover {
             background: white;
-            color: red;
+            color: #B58900;
         }
 
         .footer {
-            color: white;
+            color: #586E75;
             position: fixed;
             bottom: 50px;
             right: 50px;
@@ -34,18 +34,21 @@
             background: none;
             font-size: 12px;
             padding: 0;
+            color: #586E75;
+        }
+
+        .footer a:hover {
+            color: #B58900;
         }
     </style>
 </head>
 <body>
-<?php
-foreach (preg_grep('/^([^.])/', scandir(".")) as $f) {
-    $ext = pathinfo($f, PATHINFO_EXTENSION);
-    if ($f != "." && $f != ".." && is_dir($f)) {
-        echo "<p><a href='" . $f . "'>" . $f . "</a></p>";
-    }
-}
-?>
+<p><a href="avatar">Avatar</a></p>
+<p><a href="joker">SmartCube</a></p>
+<p><a href="lottery">Lottery Hedge Fund</a></p>
+<p><a href="franz">Deepfox</a></p>
+<p><a href="vex">Vex</a></p>
+<p><a href="slock">Slock</a></p>
 <span class="footer">(C) 2013 - 2017 Themed by <a href="http://www.cse.ust.hk/~valency/" target="_blank">Valency</a></span>
 </body>
 </html>
