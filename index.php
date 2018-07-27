@@ -1,52 +1,71 @@
 <html>
 <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <link rel="shortcut icon" href="favicon.ico"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"/>
     <style>
+        @font-face {
+            font-family: "Fancy Mono";
+            font-style: normal;
+            font-weight: 400;
+            src: url(mono.woff2) format("woff2");
+        }
+
         body {
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            padding: 50px;
-            background-color: black;
+            font-family: "Fancy Mono", monospace;
+            overflow: hidden;
             color: white;
-            font-size: 16px;
+            background: black;
+            font-size: 12px;
         }
 
         a {
-            text-decoration: none;
-            background: red;
             color: white;
-            padding: 5px;
+            text-decoration: none;
+            transition: 0.5s;
         }
 
         a:hover {
+            color: red;
+        }
+
+        a.block {
+            text-decoration: none;
+            background: red;
+            padding: 0.3em;
+            line-height: 2.5em;
+        }
+
+        a.block:hover {
             background: white;
             color: red;
         }
 
+        .main {
+            margin-top: 50px;
+            margin-left: 50px;
+        }
+
         .footer {
-            color: white;
             position: fixed;
             bottom: 50px;
             right: 50px;
-            font-size: 12px;
-        }
-
-        .footer a {
-            background: none;
-            font-size: 12px;
-            padding: 0;
         }
     </style>
 </head>
 <body>
-<?php
-foreach (preg_grep('/^([^.])/', scandir(".")) as $f) {
-    $ext = pathinfo($f, PATHINFO_EXTENSION);
-    if ($f != "." && $f != ".." && is_dir($f)) {
-        echo "<p><a href='" . $f . "'>" . $f . "</a></p>";
+<div class="main">
+    <?php
+    foreach (preg_grep('/^([^.])/', scandir(".")) as $f) {
+        $ext = pathinfo($f, PATHINFO_EXTENSION);
+        if ($f != "." && $f != ".." && is_dir($f)) {
+            echo "<p><a class='block' href='" . $f . "'>" . $f . "</a></p>";
+        }
     }
-}
-?>
-<span class="footer">(C) 2013 - 2017 Themed by <a href="http://www.cse.ust.hk/~valency/" target="_blank">Valency</a></span>
+    ?>
+</div>
+<span class="footer">(C) 2013 - 2018 Themed by <a href="http://www.cse.ust.hk/~valency/" target="_blank">Valency</a></span>
 </body>
 </html>
 
