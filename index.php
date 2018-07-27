@@ -17,7 +17,6 @@
             overflow: hidden;
             color: white;
             background: black;
-            font-size: 12px;
         }
 
         p {
@@ -37,8 +36,8 @@
         a.block {
             text-decoration: none;
             background: red;
-            padding: 0.5em;
-            line-height: 3em;
+            padding: 0.3em;
+            line-height: 2.5em;
         }
 
         a.block:hover {
@@ -55,6 +54,7 @@
             position: fixed;
             bottom: 50px;
             right: 50px;
+            font-size: small;
         }
     </style>
 </head>
