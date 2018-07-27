@@ -37,8 +37,8 @@
         a.block {
             text-decoration: none;
             background: red;
-            padding: 0.3em;
-            line-height: 2.5em;
+            padding: 0.5em;
+            line-height: 3em;
         }
 
         a.block:hover {
