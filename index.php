@@ -20,6 +20,10 @@
             font-size: 12px;
         }
 
+        p {
+            margin: 0;
+        }
+
         a {
             color: white;
             text-decoration: none;
